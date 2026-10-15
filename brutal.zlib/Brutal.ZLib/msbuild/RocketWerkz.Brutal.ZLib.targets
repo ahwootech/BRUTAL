@@ -1,0 +1,10 @@
+<Project>
+  <!-- Injects -DZLIB_NUGET_DIR into cmake for any project referencing this package. -->
+  <PropertyGroup>
+    <ZLibNuGetDir>$([MSBuild]::NormalizePath('$(MSBuildThisFileDirectory)', '..').Replace('\', '/'))</ZLibNuGetDir>
+    <CMakeBuildArgs Condition="'$(CMakeBuildArgs)' != ''"
+      >$(CMakeBuildArgs) -DZLIB_NUGET_DIR=$(ZLibNuGetDir)</CMakeBuildArgs
+    >
+    <CMakeBuildArgs Condition="'$(CMakeBuildArgs)' == ''">-DZLIB_NUGET_DIR=$(ZLibNuGetDir)</CMakeBuildArgs>
+  </PropertyGroup>
+</Project>

@@ -1,0 +1,51 @@
+THIRD-PARTY LICENSE NOTICES
+RocketWerkz.Brutal.ZLib
+
+This package ships one third-party component, zlib, as native libraries and as its
+public C headers in source form. The license governing it is reproduced in full below.
+
+
+==============================================================================
+zlib
+==============================================================================
+
+  Name        zlib, a general purpose data compression library
+  Version     1.3.2.1-motley
+              built from upstream commit e3dc0a85b7032e98380dec011bc8f2c2ee0d8fca
+              (v1.3.2-85-ge3dc0a8)
+  Upstream    https://zlib.net  --  https://github.com/madler/zlib
+  SPDX        Zlib
+  Shipped as  zlib.dll (win-x64); libzlib.so, libzlib.so.1 and libzlib.so.1.3.2.1
+              (linux-x64); libzlib.dylib, libzlib.1.dylib and libzlib.1.3.2.1.dylib
+              (osx-arm64); the public C headers zlib.h and zconf.h in source form;
+              and the Windows import library zlib.lib
+
+  Built from unaltered upstream source. The build names the output library zlib on all
+  three platforms, where an upstream build produces z on Linux and macOS; no source is
+  changed.
+
+  Acknowledgement, as invited by the first condition below:
+
+      This software is based in part on the work of Jean-loup Gailly and Mark Adler,
+      the authors of the zlib general purpose compression library (https://zlib.net).
+
+  Copyright (C) 1995-2026 Jean-loup Gailly and Mark Adler
+
+  This software is provided 'as-is', without any express or implied
+  warranty.  In no event will the authors be held liable for any damages
+  arising from the use of this software.
+
+  Permission is granted to anyone to use this software for any purpose,
+  including commercial applications, and to alter it and redistribute it
+  freely, subject to the following restrictions:
+
+  1. The origin of this software must not be misrepresented; you must not
+     claim that you wrote the original software. If you use this software
+     in a product, an acknowledgment in the product documentation would be
+     appreciated but is not required.
+  2. Altered source versions must be plainly marked as such, and must not be
+     misrepresented as being the original software.
+  3. This notice may not be removed or altered from any source distribution.
+
+  Jean-loup Gailly        Mark Adler
+  jloup@gzip.org          madler@alumni.caltech.edu

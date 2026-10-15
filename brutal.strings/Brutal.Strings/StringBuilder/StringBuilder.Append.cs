@@ -1,0 +1,194 @@
+#define IMPLEMENT_STRING_BUILDER
+
+using System.Buffers;
+
+namespace Brutal.Strings;
+
+#if IMPLEMENT_STRING_BUILDER
+public partial class StringBuilder<TChar>
+#else
+public partial struct ValueStringBuilder<TChar>
+#endif
+{
+    private Span<TChar> GetSpan(int contentSizeHint, int alignment)
+    {
+        return GetSpan(Math.Max(contentSizeHint, Math.Abs(alignment)));
+    }
+
+    private void Align(Span<TChar> destination, ref int elementsWritten, int alignment)
+    {
+        if (alignment == 0)
+            return;
+
+        // Alignment is based on grapheme count, which means we may write more than "alignment",
+        // i.e. more than we pre-grew for - retry until it fits.
+        while (!Utf<TChar>.TryAlign(destination, ref elementsWritten, alignment))
+            destination = GetSpan(destination.Length + 1);
+    }
+
+    /// Pads content already written and advanced since <paramref name="start"/> to <paramref name="alignment"/>,
+    /// growing as needed. Used by nested interpolation: the inner handler writes through directly, then the outer
+    /// hole's alignment is applied after the fact. <paramref name="start"/> is the position before the inner wrote.
+    public void AlignFrom(int start, int alignment)
+    {
+        if (alignment == 0)
+            return;
+
+        // rewind - don't use MoveTo() as it would null-terminate over its first element
+        var elementsWritten = _position - start;
+        _position = start;
+        Align(FreeSpan, ref elementsWritten, alignment);
+        Advance(elementsWritten);
+    }
+
+    /// <summary>Format <paramref name="value"/> into <typeparamref name="TChar"/> elements and append it; the writer grows as needed.</summary>
+    /// <param name="value">Value to format and append.</param>
+    /// <param name="alignment">If non-zero, pads the appended content to this many elements (positive: right-align, negative: left-align).</param>
+    /// <param name="format">Optional format string, forwarded to the value's formatting interfaces.</param>
+    /// <param name="provider">Optional format provider.</param>
+    /// <exception cref="ArgumentOutOfRangeException">The writer's <see cref="IBufferWriter{T}.GetSpan"/> couldn't satisfy the request (e.g. fixed-capacity writer hit its limit).</exception>
+    public void Append<T>(T value, int alignment = 0, string? format = null, IFormatProvider? provider = null)
+    {
+        var sizeHint = Math.Abs(alignment);
+
+        Span<TChar> destination;
+        int elementsWritten;
+        while (!Utf<TChar>.TryFormat(value, destination = GetSpan(sizeHint), out elementsWritten, format, provider))
+        {
+            // Format didn't fit - ask for strictly more than what we just got (progress guarantee).
+            sizeHint = destination.Length + 1;
+        }
+
+        Align(destination, ref elementsWritten, alignment);
+        Advance(elementsWritten);
+    }
+
+    /// <summary>Tries to format <paramref name="value"/> into <typeparamref name="TChar"/> elements and append it.</summary>
+    /// <param name="value">The value to format and append.</param>
+    /// <param name="alignment">If non-zero, pads the appended content to this many elements (positive: right-align, negative: left-align).</param>
+    /// <param name="format">Optional format string, forwarded to the value's formatting interfaces.</param>
+    /// <param name="provider">Optional format provider.</param>
+    /// <returns>true on success; false if remaining capacity was insufficient.</returns>
+    public bool TryAppend<T>(T value, int alignment = 0, string? format = null, IFormatProvider? provider = null)
+    {
+        if (!TryGetSpan(0, alignment, out var destination))
+            return false;
+        if (!Utf<TChar>.TryFormat(value, destination, out var elementsWritten, format, provider))
+            return Fail(); // can't fit formatted value
+        if (!Utf<TChar>.TryAlign(destination, ref elementsWritten, alignment))
+            return Fail(); // alignment overflow (grapheme→element shift exceeded pre-grow)
+        Advance(elementsWritten);
+        return true;
+    }
+
+    #region string/ref struct specializations
+
+    /// <inheritdoc cref="Append{T}(T, int, string?, IFormatProvider?)" />
+    public void Append(String8View value, int alignment = 0)
+    {
+        var elementsWritten = Utf<TChar>.GetElementCount(value);
+        var destination = GetSpan(elementsWritten, alignment); // grow if needed / throw if doesn't fit
+        Utf<TChar>.GetElements(value, destination);
+        Align(destination, ref elementsWritten, alignment);
+        Advance(elementsWritten);
+    }
+
+    /// <inheritdoc cref="Append{T}(T, int, string?, IFormatProvider?)" />
+    public void Append(String16View value, int alignment = 0)
+    {
+        var elementsWritten = Utf<TChar>.GetElementCount(value);
+        var destination = GetSpan(elementsWritten, alignment); // grow if needed / throw if doesn't fit
+        Utf<TChar>.GetElements(value, destination);
+        Align(destination, ref elementsWritten, alignment);
+        Advance(elementsWritten);
+    }
+
+    /// <inheritdoc cref="TryAppend{T}(T, int, string?, IFormatProvider?)" />
+    public bool TryAppend(String8View value, int alignment = 0)
+    {
+        var elementsWritten = Utf<TChar>.GetElementCount(value);
+        if (!TryGetSpan(elementsWritten, alignment, out var destination))
+            return false;
+        Utf<TChar>.GetElements(value, destination);
+        if (!Utf<TChar>.TryAlign(destination, ref elementsWritten, alignment))
+            return Fail(); // alignment overflow (grapheme→element shift exceeded pre-grow)
+        Advance(elementsWritten);
+        return true;
+    }
+
+    /// <inheritdoc cref="TryAppend{T}(T, int, string?, IFormatProvider?)" />
+    public bool TryAppend(String16View value, int alignment = 0)
+    {
+        var elementsWritten = Utf<TChar>.GetElementCount(value);
+        if (!TryGetSpan(elementsWritten, alignment, out var destination))
+            return false;
+        Utf<TChar>.GetElements(value, destination);
+        if (!Utf<TChar>.TryAlign(destination, ref elementsWritten, alignment))
+            return Fail(); // alignment overflow (grapheme→element shift exceeded pre-grow)
+        Advance(elementsWritten);
+        return true;
+    }
+
+    #endregion
+
+    #region AppendLine
+
+    /// <summary>Append a <see cref="NewLine"/>, growing as needed.</summary>
+    /// <exception cref="ArgumentOutOfRangeException">The required capacity exceeds the builder's limit.</exception>
+    public void AppendLine() => Append(NewLine);
+
+    /// <summary>Appends <paramref name="value"/> (optionally padded) followed by <see cref="NewLine"/>, growing as needed.</summary>
+    /// <inheritdoc cref="AppendLine()" path="/exception"/>
+    public void AppendLine<T>(T value, int alignment = 0, string? format = null, IFormatProvider? provider = null)
+    {
+        Append(value, alignment, format, provider);
+        AppendLine();
+    }
+
+    /// <inheritdoc cref="AppendLine{T}(T, int, string?, IFormatProvider?)" />
+    public void AppendLine(String8View value, int alignment = 0)
+    {
+        Append(value, alignment);
+        AppendLine();
+    }
+
+    /// <inheritdoc cref="AppendLine{T}(T, int, string?, IFormatProvider?)" />
+    public void AppendLine(String16View value, int alignment = 0)
+    {
+        Append(value, alignment);
+        AppendLine();
+    }
+
+    /// Tries to append a <see cref="NewLine"/>.
+    public bool TryAppendLine() => TryAppend((String16View)NewLine);
+
+    /// Tries to append <paramref name="value"/> (optionally padded) followed by <see cref="NewLine"/>.
+    /// Rolls back atomically on failure.
+    public bool TryAppendLine<T>(T value, int alignment = 0, string? format = null, IFormatProvider? provider = null)
+    {
+        var checkpoint = _position;
+        if (TryAppend(value, alignment, format, provider) && TryAppendLine())
+            return true;
+        return Fail(checkpoint); // restore, in case value was appended but newline wasn't
+    }
+
+    /// <inheritdoc cref="AppendLine{T}(T, int, string?, IFormatProvider?)" />
+    public bool TryAppendLine(String8View value, int alignment = 0)
+    {
+        var checkpoint = _position;
+        if (TryAppend(value, alignment) && TryAppendLine())
+            return true;
+        return Fail(checkpoint); // restore, in case value was appended but newline wasn't
+    }
+
+    /// <inheritdoc cref="AppendLine{T}(T, int, string?, IFormatProvider?)" />
+    public bool TryAppendLine(String16View value, int alignment = 0)
+    {
+        var checkpoint = _position;
+        if (TryAppend(value, alignment) && TryAppendLine())
+            return true;
+        return Fail(checkpoint); // restore, in case value was appended but newline wasn't
+    }
+
+    #endregion
+}

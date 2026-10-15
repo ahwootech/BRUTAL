@@ -1,0 +1,18 @@
+global using System.Diagnostics.Contracts;
+global using System.Runtime.CompilerServices;
+global using System.Runtime.InteropServices;
+global using Brutal.ImGuiApi.InlineArrays;
+global using Brutal.ImGuiApi.Internal;
+global using Brutal.ImGuiApi.Internal.InlineArrays;
+global using Brutal.Numerics;
+global using Brutal.Pointers;
+global using Brutal.Pointers.Extensions;
+global using Brutal.Strings;
+global using Char16 = char;
+global using Char8 = byte;
+global using String16 = string;
+global using PInvoke = Brutal.ImGuiApi.Internal.PInvoke;
+global using String16View = System.ReadOnlySpan<char>;
+global using String8View = System.ReadOnlySpan<byte>;
+global using StringBuilder16 = Brutal.Strings.StringBuilder<char>;
+global using StringBuilder8 = Brutal.Strings.StringBuilder<byte>;

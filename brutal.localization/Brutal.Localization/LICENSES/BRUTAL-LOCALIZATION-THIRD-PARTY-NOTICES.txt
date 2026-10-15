@@ -1,0 +1,47 @@
+THIRD-PARTY LICENSE NOTICES
+RocketWerkz.Brutal.Localization
+
+This package redistributes the third-party component listed below. It is reproduced
+with the license that governs it.
+
+
+==============================================================================
+ResX.NET
+==============================================================================
+
+  Name        ResX.NET, by winscripter
+  Version     1.0.0, the version upstream states for itself. Upstream publishes
+              no tagged release.
+  Upstream    https://github.com/winscripter/resx-net
+  SPDX        MIT
+  Shipped as  C# source compiled into Brutal.Localization.dll, as the types in the
+              Brutal.Localization.ResX namespace
+
+  The code has been modified: it was moved into the namespace above, and has since
+  received bug fixes.
+
+  Separately, this package writes the ResX 2.0 schema header into the .resx files it
+  produces. That header is part of the ResX file format and originates with it.
+
+MIT License
+
+Copyright (c) 2024 winscripter
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+

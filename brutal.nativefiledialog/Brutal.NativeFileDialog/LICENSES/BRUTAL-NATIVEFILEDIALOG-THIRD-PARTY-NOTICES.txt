@@ -1,0 +1,32 @@
+Brutal.NativeFileDialog redistributes the third-party components listed below.
+Each is reproduced with the license that governs it.
+
+============================================================
+nativefiledialog-extended
+============================================================
+
+    Name        nativefiledialog-extended
+    Version     v1.2.1-10-g6db343a, commit 6db343ad341ba2d7166f1a71b5b182a380e5bc08
+    Upstream    https://github.com/btzy/nativefiledialog-extended
+    SPDX        Zlib
+    Shipped as  the nfd native library
+
+Upstream names no copyright holder. Its LICENSE file carries the zlib license
+text and no copyright line, and it is reproduced below as upstream states it.
+
+This software is provided 'as-is', without any express or implied
+warranty.  In no event will the authors be held liable for any damages
+arising from the use of this software.
+
+Permission is granted to anyone to use this software for any purpose,
+including commercial applications, and to alter it and redistribute it
+freely, subject to the following restrictions:
+
+1. The origin of this software must not be misrepresented; you must not
+   claim that you wrote the original software. If you use this software
+   in a product, an acknowledgment in the product documentation would be
+   appreciated but is not required.
+2. Altered source versions must be plainly marked as such, and must not be
+   misrepresented as being the original software.
+3. This notice may not be removed or altered from any source distribution.
+

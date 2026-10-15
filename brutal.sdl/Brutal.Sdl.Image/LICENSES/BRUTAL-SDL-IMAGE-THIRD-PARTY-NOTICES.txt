@@ -1,0 +1,217 @@
+THIRD-PARTY LICENSE NOTICES
+RocketWerkz.Brutal.Sdl.Image
+
+This package redistributes third-party software. The licenses governing that software
+are reproduced below in full.
+
+WHAT THIS PACKAGE CONTAINS
+
+  One native library, on every runtime identifier the package supports
+  (win-x64, linux-x64, osx-arm64):
+
+    SDL_image   3.4.4   SDL3_image.dll / libSDL3_image.so / libSDL3_image.dylib
+
+  Five components maintained by third parties are compiled into that library and are
+  governed by their own licenses, one section each below:
+
+    stb_image   the general image decoding backend
+    tiny_jpeg   JPEG encoding
+    NanoSVG     the SVG loader
+    QOI         the QOI loader
+    XPaint      parts of the GIF decoder
+
+  All five are present on every runtime identifier.
+
+A NOTE ON SCOPE
+
+  This package depends on RocketWerkz.Brutal.Sdl and links against SDL3 at runtime.
+  SDL3 is not contained in this package and is covered by that package's own notices.
+
+  SDL_image can optionally be built against libpng, libjpeg, libtiff, libwebp, libavif,
+  dav1d, aom and libjxl. This build enables none of them, none is contained in the
+  shipped library, and none is attributed here.
+
+==============================================================================
+SDL_image
+==============================================================================
+
+  Name        SDL_image
+  Version     3.4.4
+  Upstream    https://github.com/libsdl-org/SDL_image
+  SPDX        Zlib
+  Shipped as  SDL3_image.dll, libSDL3_image.so, libSDL3_image.dylib
+
+Copyright (C) 1997-2026 Sam Lantinga <slouken@libsdl.org>
+
+This software is provided 'as-is', without any express or implied
+warranty.  In no event will the authors be held liable for any damages
+arising from the use of this software.
+
+Permission is granted to anyone to use this software for any purpose,
+including commercial applications, and to alter it and redistribute it
+freely, subject to the following restrictions:
+
+1. The origin of this software must not be misrepresented; you must not
+   claim that you wrote the original software. If you use this software
+   in a product, an acknowledgment in the product documentation would be
+   appreciated but is not required.
+2. Altered source versions must be plainly marked as such, and must not be
+   misrepresented as being the original software.
+3. This notice may not be removed or altered from any source distribution.
+
+==============================================================================
+stb_image
+==============================================================================
+
+  Name        stb_image
+  Version     as vendored by SDL_image 3.4.4
+  Upstream    https://github.com/nothings/stb
+  SPDX        MIT OR Unlicense
+  Shipped as  compiled into SDL3_image.dll, libSDL3_image.so, libSDL3_image.dylib
+
+  stb_image is offered under two mutually exclusive licenses, both reproduced below
+  as upstream states them.
+
+------------------------------------------------------------------------------
+ALTERNATIVE A - MIT License
+Copyright (c) 2017 Sean Barrett
+Permission is hereby granted, free of charge, to any person obtaining a copy of
+this software and associated documentation files (the "Software"), to deal in
+the Software without restriction, including without limitation the rights to
+use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies
+of the Software, and to permit persons to whom the Software is furnished to do
+so, subject to the following conditions:
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+------------------------------------------------------------------------------
+ALTERNATIVE B - Public Domain (www.unlicense.org)
+This is free and unencumbered software released into the public domain.
+Anyone is free to copy, modify, publish, use, compile, sell, or distribute this
+software, either in source code form or as a compiled binary, for any purpose,
+commercial or non-commercial, and by any means.
+In jurisdictions that recognize copyright laws, the author or authors of this
+software dedicate any and all copyright interest in the software to the public
+domain. We make this dedication for the benefit of the public at large and to
+the detriment of our heirs and successors. We intend this dedication to be an
+overt act of relinquishment in perpetuity of all present and future rights to
+this software under copyright law.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN
+ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
+WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+------------------------------------------------------------------------------
+
+==============================================================================
+tiny_jpeg
+==============================================================================
+
+  Name        tiny_jpeg
+  Version     as vendored by SDL_image 3.4.4
+  Upstream    https://github.com/serge-rgb/TinyJPEG
+  SPDX        LicenseRef-PublicDomain
+  Shipped as  compiled into SDL3_image.dll, libSDL3_image.so, libSDL3_image.dylib
+
+  Tiny JPEG Encoder, by Sergio Gonzalez. Upstream states its terms as follows:
+
+This software is in the public domain. Where that dedication is not
+recognized, you are granted a perpetual, irrevocable license to copy and
+modify this file as you see fit.
+
+==============================================================================
+NanoSVG
+==============================================================================
+
+  Name        NanoSVG
+  Version     as vendored by SDL_image 3.4.4
+  Upstream    https://github.com/memononen/nanosvg
+  SPDX        Zlib
+  Shipped as  compiled into SDL3_image.dll, libSDL3_image.so, libSDL3_image.dylib
+
+Copyright (c) 2013-14 Mikko Mononen memon@inside.org
+
+This software is provided 'as-is', without any express or implied
+warranty.  In no event will the authors be held liable for any damages
+arising from the use of this software.
+
+Permission is granted to anyone to use this software for any purpose,
+including commercial applications, and to alter it and redistribute it
+freely, subject to the following restrictions:
+
+1. The origin of this software must not be misrepresented; you must not
+claim that you wrote the original software. If you use this software
+in a product, an acknowledgment in the product documentation would be
+appreciated but is not required.
+2. Altered source versions must be plainly marked as such, and must not be
+misrepresented as being the original software.
+3. This notice may not be removed or altered from any source distribution.
+
+The SVG parser is based on Anti-Grain Geometry 2.4 SVG example
+Copyright (C) 2002-2004 Maxim Shemanarev (McSeem) (http://www.antigrain.com/)
+
+Arc calculation code based on canvg (https://code.google.com/p/canvg/)
+
+Bounding box calculation based on http://blog.hackers-cafe.net/2009/06/how-to-calculate-bezier-curves-bounding.html
+
+==============================================================================
+QOI
+==============================================================================
+
+  Name        QOI
+  Version     as vendored by SDL_image 3.4.4
+  Upstream    https://github.com/phoboslab/qoi
+  SPDX        MIT
+  Shipped as  compiled into SDL3_image.dll, libSDL3_image.so, libSDL3_image.dylib
+
+  The "Quite OK Image" format, by Dominic Szablewski.
+
+Copyright(c) 2021 Dominic Szablewski
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of
+this software and associated documentation files(the "Software"), to deal in
+the Software without restriction, including without limitation the rights to
+use, copy, modify, merge, publish, distribute, sublicense, and / or sell copies
+of the Software, and to permit persons to whom the Software is furnished to do
+so, subject to the following conditions :
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+==============================================================================
+XPaint (parts of the GIF decoder)
+==============================================================================
+
+  Name        XPaint
+  Version     as vendored by SDL_image 3.4.4  (the notice states 1990-1996)
+  Upstream    https://sourceforge.net/projects/xpaint/
+  SPDX        LicenseRef-XPaint  (upstream states no identifier)
+  Shipped as  compiled into SDL3_image.dll, libSDL3_image.so, libSDL3_image.dylib
+
+  SDL_image's GIF decoder adapts part of its code from XPaint. SDL_image says so in the
+  decoder itself and reproduces the original notice; both are reproduced below as
+  SDL_image states them. Upstream draws the notice inside an ASCII box; the frame is not
+  reproduced and no word of the notice is changed.
+
+Some parts of the code have been adapted from XPaint:
+Copyright 1990, 1991, 1993 David Koblas.
+Copyright 1996 Torsten Martinsen.
+  Permission to use, copy, modify, and distribute this software
+  and its documentation for any purpose and without fee is hereby
+  granted, provided that the above copyright notice appear in all
+  copies and that both that copyright notice and this permission
+  notice appear in supporting documentation.  This software is
+  provided "as is" without express or implied warranty.

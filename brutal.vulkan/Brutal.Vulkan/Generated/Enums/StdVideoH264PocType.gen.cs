@@ -1,0 +1,31 @@
+namespace Brutal.VulkanApi
+{
+    ///
+    public enum StdVideoH264PocType : int
+    {
+        /// <summary>
+        ///     <c>_0</c>
+        /// </summary>
+        _0 = 0,
+
+        /// <summary>
+        ///     <c>_1</c>
+        /// </summary>
+        _1 = 1,
+
+        /// <summary>
+        ///     <c>_2</c>
+        /// </summary>
+        _2 = 2,
+
+        /// <summary>
+        ///     <c>Invalid</c>
+        /// </summary>
+        Invalid = 0x7FFFFFFF,
+
+        /// <summary>
+        ///     <c>MaxEnum</c>
+        /// </summary>
+        MaxEnum = 0x7FFFFFFF,
+    }
+}

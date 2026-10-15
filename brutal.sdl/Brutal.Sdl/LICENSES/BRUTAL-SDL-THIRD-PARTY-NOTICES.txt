@@ -1,0 +1,621 @@
+THIRD-PARTY LICENSE NOTICES
+RocketWerkz.Brutal.Sdl
+
+This package redistributes third-party software. The licenses governing that software
+are reproduced below in full.
+
+WHAT THIS PACKAGE CONTAINS
+
+  One native library, on every runtime identifier the package supports
+  (win-x64, linux-x64, osx-arm64):
+
+    SDL     3.4.12    SDL3.dll / libSDL3.so / libSDL3.dylib
+
+  SDL is not a single work. Ten third-party components are compiled into that
+  library and are governed by their own licenses, one section each below:
+
+    HIDAPI              USB/Bluetooth HID access, behind SDL's SDL_hid_* API
+    yuv2rgb             YUV to RGB colour conversion
+    SDL_gfx             the surface rotation used by the software renderer
+    stb_image           the PNG decoding behind SDL's SDL_LoadPNG
+    SDL_qsort           the sort behind SDL's SDL_qsort and SDL_qsort_r
+    X.Org keysym table  key symbol to Unicode mapping, for X11 and Wayland
+    XSETTINGS client    desktop scaling and DPI settings, for X11
+    EDID parser         display EDID decoding, for X11 monitor names
+    xdg-user-dirs       user-directory lookup, for the Unix filesystem backend
+    Wayland protocols   24 protocol descriptions, compiled to C by wayland-scanner
+
+  HIDAPI, yuv2rgb, SDL_gfx, stb_image and SDL_qsort are present on every
+  runtime identifier.
+
+  The X.Org keysym table, the XSETTINGS client, the EDID parser, xdg-user-dirs
+  and the Wayland protocol code are present in the linux-x64 library only. The
+  keysym table, XSETTINGS client and EDID parser are built for the X11 and
+  Wayland video drivers, the xdg-user-dirs lookup for the Unix filesystem
+  backend, and the protocol descriptions for the Wayland driver -- none of
+  which the win-x64 and osx-arm64 builds use.
+
+A NOTE ON SCOPE
+
+  Only components contained in the shipped libraries are listed. SDL also vendors the
+  Khronos EGL, OpenGL and Vulkan headers, which this package compiles against but does
+  not redistribute in any form.
+
+  Two further third-party bodies of code are compiled in and have no section below, because
+  neither states a holder to attribute. miniz, the deflate implementation built alongside
+  stb_image, states an unlicense.org public-domain dedication and names no holder. SDL also
+  carries its own copy of the Sun Microsystems libm; it is built as a separate static library
+  so that unreferenced symbols do not reach the shared library, and every call into it sits
+  behind a build guard that the system C library satisfies on all three runtime identifiers.
+
+  Where an upstream license file covers more code than this package ships, only the
+  blocks governing the code actually contained here are reproduced. Each such omission
+  is named where it occurs, so that nothing below should be read as truncated.
+
+==============================================================================
+SDL (Simple DirectMedia Layer)
+==============================================================================
+
+  Name        SDL
+  Version     3.4.12
+  Upstream    https://libsdl.org  --  https://github.com/libsdl-org/SDL
+  SPDX        Zlib
+  Shipped as  SDL3.dll, libSDL3.so, libSDL3.dylib
+
+Copyright (C) 1997-2026 Sam Lantinga <slouken@libsdl.org>
+  
+This software is provided 'as-is', without any express or implied
+warranty.  In no event will the authors be held liable for any damages
+arising from the use of this software.
+
+Permission is granted to anyone to use this software for any purpose,
+including commercial applications, and to alter it and redistribute it
+freely, subject to the following restrictions:
+  
+1. The origin of this software must not be misrepresented; you must not
+   claim that you wrote the original software. If you use this software
+   in a product, an acknowledgment in the product documentation would be
+   appreciated but is not required. 
+2. Altered source versions must be plainly marked as such, and must not be
+   misrepresented as being the original software.
+3. This notice may not be removed or altered from any source distribution.
+
+==============================================================================
+HIDAPI
+==============================================================================
+
+  Name        HIDAPI
+  Version     0.14.0  (as vendored by SDL 3.4.12)
+  Upstream    https://github.com/libusb/hidapi
+  SPDX        HIDAPI
+  Shipped as  compiled into SDL3.dll, libSDL3.so, libSDL3.dylib
+
+  HIDAPI is offered under three mutually exclusive licenses, and the choice is the
+  redistributor's. Upstream states the terms as follows. The three filenames it
+  names are files in HIDAPI's own distribution at the upstream address above; they
+  are not part of this package, and nothing below depends on reading them:
+
+HIDAPI can be used under one of three licenses.
+
+1. The GNU General Public License, version 3.0, in LICENSE-gpl3.txt
+2. A BSD-Style License, in LICENSE-bsd.txt.
+3. The more liberal original HIDAPI license. LICENSE-orig.txt
+
+The license chosen is at the discretion of the user of HIDAPI. For example:
+1. An author of GPL software would likely use HIDAPI under the terms of the
+GPL.
+
+2. An author of commercial closed-source software would likely use HIDAPI
+under the terms of the BSD-style license or the original HIDAPI license.
+
+  This distribution is made under the original HIDAPI license, the third of those
+  three, reproduced in full below. It is the same election SDL makes for the copy it
+  carries. We do NOT distribute HIDAPI under the GNU General Public License v3 or
+  under the BSD-style license, and neither of those texts is reproduced.
+
+ HIDAPI - Multi-Platform library for
+ communication with HID devices.
+
+ Copyright 2009, Alan Ott, Signal 11 Software.
+ All Rights Reserved.
+ 
+ This software may be used by anyone for any reason so
+ long as the copyright notice in the source files
+ remains intact.
+
+==============================================================================
+yuv2rgb
+==============================================================================
+
+  Name        yuv2rgb
+  Version     as vendored by SDL 3.4.12  (upstream publishes no version)
+  Upstream    https://github.com/descampsa/yuv2rgb
+  SPDX        BSD-3-Clause
+  Shipped as  compiled into SDL3.dll, libSDL3.so, libSDL3.dylib
+
+Copyright (c) 2016, Adrien Descamps
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+
+* Redistributions of source code must retain the above copyright notice, this
+  list of conditions and the following disclaimer.
+
+* Redistributions in binary form must reproduce the above copyright notice,
+  this list of conditions and the following disclaimer in the documentation
+  and/or other materials provided with the distribution.
+
+* Neither the name of yuv2rgb nor the names of its
+  contributors may be used to endorse or promote products derived from
+  this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+==============================================================================
+SDL_gfx
+==============================================================================
+
+  Name        SDL_gfx
+  Version     as vendored by SDL 3.4.12  (the notice states 2001-2011; upstream publishes no version for this file)
+  Upstream    https://sourceforge.net/projects/sdlgfx/
+  SPDX        Zlib
+  Shipped as  compiled into SDL3.dll, libSDL3.so, libSDL3.dylib
+
+  SDL's surface rotation comes from SDL_gfx. SDL states where it came from and
+  reproduces the original notice; both are reproduced below as SDL states them.
+
+Shamelessly stolen from SDL_gfx by Andreas Schiffler. Original copyright follows:
+
+Copyright (C) 2001-2011  Andreas Schiffler
+
+This software is provided 'as-is', without any express or implied
+warranty. In no event will the authors be held liable for any damages
+arising from the use of this software.
+
+Permission is granted to anyone to use this software for any purpose,
+including commercial applications, and to alter it and redistribute it
+freely, subject to the following restrictions:
+
+   1. The origin of this software must not be misrepresented; you must not
+   claim that you wrote the original software. If you use this software
+   in a product, an acknowledgment in the product documentation would be
+   appreciated but is not required.
+
+   2. Altered source versions must be plainly marked as such, and must not be
+   misrepresented as being the original software.
+
+   3. This notice may not be removed or altered from any source
+   distribution.
+
+Andreas Schiffler -- aschiffler at ferzkopp dot net
+
+==============================================================================
+stb_image
+==============================================================================
+
+  Name        stb_image
+  Version     v2.30  (as vendored by SDL 3.4.12)
+  Upstream    https://github.com/nothings/stb
+  SPDX        MIT OR Unlicense
+  Shipped as  compiled into SDL3.dll, libSDL3.so, libSDL3.dylib
+
+  The PNG decoding behind SDL's SDL_LoadPNG. SDL compiles it into the library on every
+  runtime identifier. SDL_image carries its own copy of this same component, reproduced
+  in that package's notices file; the two are pinned separately.
+
+  stb_image is offered under two mutually exclusive licenses, both reproduced below as
+  upstream states them.
+
+------------------------------------------------------------------------------
+ALTERNATIVE A - MIT License
+Copyright (c) 2017 Sean Barrett
+Permission is hereby granted, free of charge, to any person obtaining a copy of
+this software and associated documentation files (the "Software"), to deal in
+the Software without restriction, including without limitation the rights to
+use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies
+of the Software, and to permit persons to whom the Software is furnished to do
+so, subject to the following conditions:
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+------------------------------------------------------------------------------
+ALTERNATIVE B - Public Domain (www.unlicense.org)
+This is free and unencumbered software released into the public domain.
+Anyone is free to copy, modify, publish, use, compile, sell, or distribute this
+software, either in source code form or as a compiled binary, for any purpose,
+commercial or non-commercial, and by any means.
+In jurisdictions that recognize copyright laws, the author or authors of this
+software dedicate any and all copyright interest in the software to the public
+domain. We make this dedication for the benefit of the public at large and to
+the detriment of our heirs and successors. We intend this dedication to be an
+overt act of relinquishment in perpetuity of all present and future rights to
+this software under copyright law.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN
+ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
+WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+------------------------------------------------------------------------------
+
+==============================================================================
+SDL_qsort
+==============================================================================
+
+  Name        SDL_qsort
+  Version     qsort.c 1.16  (as vendored by SDL 3.4.12; the notice states 1998-2021)
+  Upstream    https://www.mccaughan.org.uk/software/
+  SPDX        Zlib
+  Shipped as  compiled into SDL3.dll, libSDL3.so, libSDL3.dylib
+
+  The sort behind SDL's SDL_qsort and SDL_qsort_r. SDL states where it came from, that it
+  altered the code, and reproduces the original notice; all three are reproduced below as
+  SDL states them.
+
+This code came from Gareth McCaughan, under the zlib license.
+Specifically this: https://www.mccaughan.org.uk/software/qsort.c-1.16
+
+Everything below this comment until the HAVE_QSORT #endif was from Gareth
+(any minor changes will be noted inline).
+
+Thank you to Gareth for relicensing this code under the zlib license for our
+benefit!
+
+Update for SDL3: we have modified this from a qsort function to qsort_r.
+
+--ryan.
+
+Copyright (c) 1998-2021 Gareth McCaughan
+
+This software is provided 'as-is', without any express or implied
+warranty. In no event will the authors be held liable for any
+damages arising from the use of this software.
+
+Permission is granted to anyone to use this software for any purpose,
+including commercial applications, and to alter it and redistribute it
+freely, subject to the following restrictions:
+
+1. The origin of this software must not be misrepresented;
+   you must not claim that you wrote the original software.
+   If you use this software in a product, an acknowledgment
+   in the product documentation would be appreciated but
+   is not required.
+
+2. Altered source versions must be plainly marked as such,
+   and must not be misrepresented as being the original software.
+
+3. This notice may not be removed or altered from any source
+   distribution.
+
+==============================================================================
+X.Org keysym table
+==============================================================================
+
+  Name        X.Org keysym table
+  Version     as vendored by SDL 3.4.12  (upstream publishes no version for this table)
+  Upstream    https://gitlab.freedesktop.org/xorg/lib/libx11
+  SPDX        MIT
+  Shipped as  compiled into libSDL3.so (linux-x64) only
+
+  The mapping from key symbols to Unicode code points, used by the X11 and Wayland
+  video drivers. It names three holders, and SDL is not among them.
+
+Copyright (C) 2003-2006,2008 Jamey Sharp, Josh Triplett
+Copyright © 2009 Red Hat, Inc.
+Copyright 1990-1992,1999,2000,2004,2009,2010 Oracle and/or its affiliates.
+All rights reserved.
+
+Permission is hereby granted, free of charge, to any person obtaining a
+copy of this software and associated documentation files (the "Software"),
+to deal in the Software without restriction, including without limitation
+the rights to use, copy, modify, merge, publish, distribute, sublicense,
+and/or sell copies of the Software, and to permit persons to whom the
+Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice (including the next
+paragraph) shall be included in all copies or substantial portions of the
+Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL
+THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+DEALINGS IN THE SOFTWARE.
+
+==============================================================================
+XSETTINGS client
+==============================================================================
+
+  Name        XSETTINGS client
+  Version     as vendored by SDL 3.4.12  (upstream publishes no version for this file)
+  Upstream    https://specifications.freedesktop.org/xsettings/0.5/
+  SPDX        LicenseRef-XSettings  (upstream states no identifier)
+  Shipped as  compiled into libSDL3.so (linux-x64) only
+
+  The XSETTINGS client, read by the X11 video driver for the desktop window scaling factor
+  and the Xft DPI setting. It names two holders, and SDL is not among them. SDL states no
+  address for the implementation it imported; the address above is the XSETTINGS
+  specification that implementation serves.
+
+Copyright © 2001, 2007 Red Hat, Inc.
+Copyright 2024 Igalia S.L.
+
+Permission to use, copy, modify, distribute, and sell this software and its
+documentation for any purpose is hereby granted without fee, provided that
+the above copyright notice appear in all copies and that both that
+copyright notice and this permission notice appear in supporting
+documentation, and that the name of Red Hat not be used in advertising or
+publicity pertaining to distribution of the software without specific,
+written prior permission.  Red Hat makes no representations about the
+suitability of this software for any purpose.  It is provided "as is"
+without express or implied warranty.
+
+RED HAT DISCLAIMS ALL WARRANTIES WITH REGARD TO THIS SOFTWARE, INCLUDING ALL
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS, IN NO EVENT SHALL RED HAT
+BE LIABLE FOR ANY SPECIAL, INDIRECT OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION
+OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN
+CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+
+Author:  Owen Taylor, Red Hat, Inc.
+
+==============================================================================
+EDID parser
+==============================================================================
+
+  Name        EDID parser
+  Version     as vendored by SDL 3.4.12  (upstream publishes no version for this file)
+  Upstream    https://github.com/GNOME/mutter
+  SPDX        MIT
+  Shipped as  compiled into libSDL3.so (linux-x64) only
+
+  Display EDID decoding, used by the X11 video driver to read a monitor's real name. It
+  names one holder, and SDL is not among them. SDL states no address for the copy it
+  carries; the same file, with this notice word for word, is maintained in the project at
+  the address above.
+
+Copyright 2007 Red Hat, Inc.
+
+Permission is hereby granted, free of charge, to any person obtaining a
+copy of this software and associated documentation files (the "Software"),
+to deal in the Software without restriction, including without limitation
+on the rights to use, copy, modify, merge, publish, distribute, sub
+license, and/or sell copies of the Software, and to permit persons to whom
+the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice (including the next
+paragraph) shall be included in all copies or substantial portions of the
+Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT.  IN NO EVENT SHALL
+THE AUTHORS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
+IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+==============================================================================
+xdg-user-dirs
+==============================================================================
+
+  Name        xdg-user-dirs
+  Version     as vendored by SDL 3.4.12  (upstream publishes no version for this file)
+  Upstream    https://gitlab.freedesktop.org/xdg/xdg-user-dirs
+  SPDX        MIT
+  Shipped as  compiled into libSDL3.so (linux-x64) only
+
+  The user-directory lookup used by the Unix filesystem backend. SDL states which two
+  functions it copied, where from, and that it adapted them, then reproduces the terms;
+  all of it is reproduced below as SDL states it.
+
+  The two functions below (prefixed with `xdg_`) have been copied from:
+  https://gitlab.freedesktop.org/xdg/xdg-user-dirs/-/blob/master/xdg-user-dir-lookup.c
+  and have been adapted to work with SDL. They are licensed under the following
+  terms:
+
+  Copyright (c) 2007 Red Hat, Inc.
+
+  Permission is hereby granted, free of charge, to any person
+  obtaining a copy of this software and associated documentation files
+  (the "Software"), to deal in the Software without restriction,
+  including without limitation the rights to use, copy, modify, merge,
+  publish, distribute, sublicense, and/or sell copies of the Software,
+  and to permit persons to whom the Software is furnished to do so,
+  subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be
+  included in all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+  EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+  MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+  NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS
+  BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN
+  ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+  CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+  SOFTWARE.
+
+==============================================================================
+Wayland protocol descriptions
+==============================================================================
+
+  Name        Wayland protocols
+  Version     as vendored by SDL 3.4.12  (the descriptions are not individually versioned)
+  Upstream    https://gitlab.freedesktop.org/wayland/wayland  --  https://gitlab.freedesktop.org/wayland/wayland-protocols
+  SPDX        MIT AND HPND
+  Shipped as  compiled into libSDL3.so (linux-x64) only
+
+  Each protocol description below is compiled to C by wayland-scanner and linked into
+  the linux-x64 library. Two distinct permission texts govern the set, marked A and B
+  and reproduced in full after the list.
+
+  alpha-modifier-v1  (license A)
+      Copyright © 2024 Xaver Hugl
+
+  color-management-v1  (license A)
+      Copyright 2019 Sebastian Wick
+      Copyright 2019 Erwin Burema
+      Copyright 2020 AMD
+      Copyright 2020-2024 Collabora, Ltd.
+      Copyright 2024 Xaver Hugl
+      Copyright 2022-2025 Red Hat, Inc.
+
+  cursor-shape-v1  (license A)
+      Copyright 2018 The Chromium Authors
+      Copyright 2023 Simon Ser
+
+  fractional-scale-v1  (license A)
+      Copyright © 2022 Kenny Levinsen
+
+  frog-color-management-v1  (license A)
+      Copyright © 2023 Joshua Ashton for Valve Software
+      Copyright © 2023 Xaver Hugl
+
+  idle-inhibit-unstable-v1  (license A)
+      Copyright © 2015 Samsung Electronics Co., Ltd
+
+  input-timestamps-unstable-v1  (license A)
+      Copyright © 2017 Collabora, Ltd.
+
+  keyboard-shortcuts-inhibit-unstable-v1  (license A)
+      Copyright © 2017 Red Hat Inc.
+
+  pointer-constraints-unstable-v1  (license A)
+      Copyright © 2014      Jonas Ådahl
+      Copyright © 2015      Red Hat Inc.
+
+  pointer-warp-v1  (license A)
+      Copyright © 2024 Neal Gompa
+      Copyright © 2024 Xaver Hugl
+      Copyright © 2024 Matthias Klumpp
+      Copyright © 2024 Vlad Zahorodnii
+
+  primary-selection-unstable-v1  (license A)
+      Copyright © 2015, 2016 Red Hat
+
+  relative-pointer-unstable-v1  (license A)
+      Copyright © 2014      Jonas Ådahl
+      Copyright © 2015      Red Hat Inc.
+
+  tablet-v2  (license A)
+      Copyright 2014 © Stephen "Lyude" Chandler Paul
+      Copyright 2015-2016 © Red Hat, Inc.
+
+  text-input-unstable-v3  (license B)
+      Copyright © 2012, 2013 Intel Corporation
+      Copyright © 2015, 2016 Jan Arne Petersen
+      Copyright © 2017, 2018 Red Hat, Inc.
+      Copyright © 2018       Purism SPC
+
+  viewporter  (license A)
+      Copyright © 2013-2016 Collabora, Ltd.
+
+  wayland  (license A)
+      Copyright © 2008-2011 Kristian Høgsberg
+      Copyright © 2010-2011 Intel Corporation
+      Copyright © 2012-2013 Collabora, Ltd.
+
+  xdg-activation-v1  (license A)
+      Copyright © 2020 Aleix Pol Gonzalez <aleixpol@kde.org>
+      Copyright © 2020 Carlos Garnacho <carlosg@gnome.org>
+
+  xdg-decoration-unstable-v1  (license A)
+      Copyright © 2018 Simon Ser
+
+  xdg-dialog-v1  (license A)
+      Copyright © 2023 Carlos Garnacho
+
+  xdg-foreign-unstable-v2  (license A)
+      Copyright © 2015-2016 Red Hat Inc.
+
+  xdg-output-unstable-v1  (license A)
+      Copyright © 2017 Red Hat Inc.
+
+  xdg-shell  (license A)
+      Copyright © 2008-2013 Kristian Høgsberg
+      Copyright © 2013      Rafael Antognolli
+      Copyright © 2013      Jasper St. Pierre
+      Copyright © 2010-2013 Intel Corporation
+      Copyright © 2015-2017 Samsung Electronics Co., Ltd
+      Copyright © 2015-2017 Red Hat Inc.
+
+  xdg-toplevel-icon-v1  (license A)
+      Copyright © 2023-2024 Matthias Klumpp
+      Copyright ©      2024 David Edmundson
+
+  The following description carries no copyright notice and no license text of its
+  own. The Wayland protocols project publishes its descriptions under the license
+  marked A, and that is the license relied on here; no holder has been supplied,
+  because upstream names none and inventing one would be worse than the gap:
+
+      pointer-gestures-unstable-v1
+
+  ----------------------------------------------------------------------------
+  LICENSE A -- applies to the 22 descriptions marked A above
+  ----------------------------------------------------------------------------
+
+  4 of them -- cursor-shape-v1, pointer-warp-v1, tablet-v2, wayland --
+  carry this same license word for word, broken across lines at a different width.
+  It is reproduced once.
+
+Permission is hereby granted, free of charge, to any person obtaining a
+copy of this software and associated documentation files (the "Software"),
+to deal in the Software without restriction, including without limitation
+the rights to use, copy, modify, merge, publish, distribute, sublicense,
+and/or sell copies of the Software, and to permit persons to whom the
+Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice (including the next
+paragraph) shall be included in all copies or substantial portions of the
+Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL
+THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+DEALINGS IN THE SOFTWARE.
+
+  ----------------------------------------------------------------------------
+  LICENSE B -- applies to the 1 description marked B above
+  ----------------------------------------------------------------------------
+
+Permission to use, copy, modify, distribute, and sell this
+software and its documentation for any purpose is hereby granted
+without fee, provided that the above copyright notice appear in
+all copies and that both that copyright notice and this permission
+notice appear in supporting documentation, and that the name of
+the copyright holders not be used in advertising or publicity
+pertaining to distribution of the software without specific,
+written prior permission.  The copyright holders make no
+representations about the suitability of this software for any
+purpose.  It is provided "as is" without express or implied
+warranty.
+
+THE COPYRIGHT HOLDERS DISCLAIM ALL WARRANTIES WITH REGARD TO THIS
+SOFTWARE, INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY AND
+FITNESS, IN NO EVENT SHALL THE COPYRIGHT HOLDERS BE LIABLE FOR ANY
+SPECIAL, INDIRECT OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN
+AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION,
+ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF
+THIS SOFTWARE.

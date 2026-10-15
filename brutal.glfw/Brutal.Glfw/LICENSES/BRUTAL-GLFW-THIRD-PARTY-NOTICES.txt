@@ -1,0 +1,198 @@
+THIRD-PARTY LICENSE NOTICES
+RocketWerkz.Brutal.Glfw
+
+Brutal.Glfw redistributes the third-party components named below, as native libraries.
+Each is reproduced with the license that governs it.
+On linux-x64 and osx-arm64 the library ships three times under its soname aliases; those
+copies are byte-identical.
+
+==============================================================================
+GLFW
+==============================================================================
+
+  Name        GLFW, a library for OpenGL context, window and input handling
+  Version     3.5.1
+              built from the RocketWerkz fork, branch rocketwerkz: upstream
+              3.5.1 with trackpad gesture, scroll detail and macOS desktop
+              video mode patches, listed in the fork's ROCKETWERKZ.md
+  Upstream    https://www.glfw.org  --  https://github.com/glfw/glfw
+              fork: https://github.com/RocketWerkz/glfw
+  SPDX        Zlib
+  Shipped as  glfw3.dll (win-x64)
+              libglfw.so, libglfw.so.3, libglfw.so.3.5 (linux-x64)
+              libglfw.dylib, libglfw.3.dylib, libglfw.3.5.dylib (osx-arm64)
+
+Copyright (c) 2002-2006 Marcus Geelnard
+
+Copyright (c) 2006-2019 Camilla Löwy
+
+This software is provided 'as-is', without any express or implied
+warranty. In no event will the authors be held liable for any damages
+arising from the use of this software.
+
+Permission is granted to anyone to use this software for any purpose,
+including commercial applications, and to alter it and redistribute it
+freely, subject to the following restrictions:
+
+1. The origin of this software must not be misrepresented; you must not
+   claim that you wrote the original software. If you use this software
+   in a product, an acknowledgment in the product documentation would
+   be appreciated but is not required.
+
+2. Altered source versions must be plainly marked as such, and must not
+   be misrepresented as being the original software.
+
+3. This notice may not be removed or altered from any source
+   distribution.
+
+==============================================================================
+SDL_GameControllerDB
+==============================================================================
+
+  Name        SDL_GameControllerDB, the community gamepad mapping database
+  Version     as vendored by GLFW 3.5.1; the database carries no version of
+              its own
+  Upstream    https://github.com/gabomdq/SDL_GameControllerDB
+              https://github.com/libsdl-org/SDL
+  SPDX        Zlib
+  Shipped as  glfw3.dll (win-x64)
+              libglfw.so, libglfw.so.3, libglfw.so.3.5 (linux-x64)
+              libglfw.dylib, libglfw.3.dylib, libglfw.3.5.dylib (osx-arm64)
+
+  The mappings are compiled into each library as string data. Each library carries the
+  entries for its own platform, so the three do not hold the same set.
+
+  GLFW states below which of the entries came from the database and on what terms. That
+  statement is reproduced as GLFW wrote it, together with the notice it introduces.
+
+All gamepad mappings not labeled GLFW are copied from the
+SDL_GameControllerDB project under the following license:
+
+Simple DirectMedia Layer
+Copyright (C) 1997-2013 Sam Lantinga <slouken@libsdl.org>
+
+This software is provided 'as-is', without any express or implied warranty.
+In no event will the authors be held liable for any damages arising from the
+use of this software.
+
+Permission is granted to anyone to use this software for any purpose,
+including commercial applications, and to alter it and redistribute it
+freely, subject to the following restrictions:
+
+1. The origin of this software must not be misrepresented; you must not
+   claim that you wrote the original software. If you use this software
+   in a product, an acknowledgment in the product documentation would
+   be appreciated but is not required.
+
+2. Altered source versions must be plainly marked as such, and must not be
+   misrepresented as being the original software.
+
+3. This notice may not be removed or altered from any source distribution.
+
+==============================================================================
+Wayland protocol descriptions
+==============================================================================
+
+  Name        10 Wayland protocol descriptions, compiled to C by wayland-scanner
+              and linked into the library
+  Version     as vendored by GLFW 3.5.1; the descriptions are not individually
+              versioned
+  Upstream    https://gitlab.freedesktop.org/wayland/wayland
+              https://gitlab.freedesktop.org/wayland/wayland-protocols
+  SPDX        MIT, except pointer-gestures-unstable-v1: HPND-sell-variant
+  Shipped as  libglfw.so, libglfw.so.3, libglfw.so.3.5 (linux-x64) only
+
+  The Wayland protocol code is present in the linux-x64 library alone. The win-x64 and
+  osx-arm64 libraries use their platform's own windowing interfaces and contain none of
+  it.
+
+  Each description states its own copyright holders, listed here as each states them,
+  followed by the permission notice all but one of them share;
+  pointer-gestures-unstable-v1 states a different notice, reproduced after the shared
+  one.
+  The descriptions wrap this notice at more than one column. It is reproduced here in
+  the form used by the majority; the others differ in line breaks only.
+
+  fractional-scale-v1
+      Copyright © 2022 Kenny Levinsen
+
+  idle-inhibit-unstable-v1
+      Copyright © 2015 Samsung Electronics Co., Ltd
+
+  pointer-constraints-unstable-v1
+      Copyright © 2014      Jonas Ådahl
+      Copyright © 2015      Red Hat Inc.
+
+  pointer-gestures-unstable-v1
+      Copyright © 2015, 2021 Red Hat Inc.
+
+  relative-pointer-unstable-v1
+      Copyright © 2014      Jonas Ådahl
+      Copyright © 2015      Red Hat Inc.
+
+  viewporter
+      Copyright © 2013-2016 Collabora, Ltd.
+
+  wayland
+      Copyright © 2008-2011 Kristian Høgsberg
+      Copyright © 2010-2011 Intel Corporation
+      Copyright © 2012-2013 Collabora, Ltd.
+
+  xdg-activation-v1
+      Copyright © 2020 Aleix Pol Gonzalez <aleixpol@kde.org>
+      Copyright © 2020 Carlos Garnacho <carlosg@gnome.org>
+
+  xdg-decoration-unstable-v1
+      Copyright © 2018 Simon Ser
+
+  xdg-shell
+      Copyright © 2008-2013 Kristian Høgsberg
+      Copyright © 2013      Rafael Antognolli
+      Copyright © 2013      Jasper St. Pierre
+      Copyright © 2010-2013 Intel Corporation
+      Copyright © 2015-2017 Samsung Electronics Co., Ltd
+      Copyright © 2015-2017 Red Hat Inc.
+
+Permission is hereby granted, free of charge, to any person obtaining a
+copy of this software and associated documentation files (the "Software"),
+to deal in the Software without restriction, including without limitation
+the rights to use, copy, modify, merge, publish, distribute, sublicense,
+and/or sell copies of the Software, and to permit persons to whom the
+Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice (including the next
+paragraph) shall be included in all copies or substantial portions of the
+Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL
+THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+DEALINGS IN THE SOFTWARE.
+
+pointer-gestures-unstable-v1 is distributed under its own notice:
+
+Copyright © 2015, 2021 Red Hat Inc.
+
+Permission to use, copy, modify, distribute, and sell this
+software and its documentation for any purpose is hereby granted
+without fee, provided that the above copyright notice appear in
+all copies and that both that copyright notice and this permission
+notice appear in supporting documentation, and that the name of
+the copyright holders not be used in advertising or publicity
+pertaining to distribution of the software without specific,
+written prior permission.  The copyright holders make no
+representations about the suitability of this software for any
+purpose.  It is provided "as is" without express or implied
+warranty.
+
+THE COPYRIGHT HOLDERS DISCLAIM ALL WARRANTIES WITH REGARD TO THIS
+SOFTWARE, INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY AND
+FITNESS, IN NO EVENT SHALL THE COPYRIGHT HOLDERS BE LIABLE FOR ANY
+SPECIAL, INDIRECT OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN
+AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION,
+ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF
+THIS SOFTWARE.

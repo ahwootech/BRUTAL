@@ -1,0 +1,10 @@
+<Project>
+  <!-- Injects the package root into cmake for any project building native code against FreeType. -->
+  <PropertyGroup>
+    <FreeTypeNuGetDir>$([MSBuild]::NormalizePath('$(MSBuildThisFileDirectory)', '..').Replace('\', '/'))</FreeTypeNuGetDir>
+    <CMakeBuildArgs Condition="'$(CMakeBuildArgs)' != ''"
+      >$(CMakeBuildArgs) -DFREETYPE_NUGET_DIR=$(FreeTypeNuGetDir)</CMakeBuildArgs
+    >
+    <CMakeBuildArgs Condition="'$(CMakeBuildArgs)' == ''">-DFREETYPE_NUGET_DIR=$(FreeTypeNuGetDir)</CMakeBuildArgs>
+  </PropertyGroup>
+</Project>

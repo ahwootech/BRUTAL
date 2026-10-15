@@ -1,0 +1,12 @@
+global using System.Runtime.CompilerServices;
+global using System.Runtime.InteropServices;
+global using Brutal.ImGuiApi;
+global using Brutal.ImGuiApi.Internal;
+global using Brutal.ImPlotApi.InlineArrays;
+global using Brutal.ImPlotApi.Internal;
+global using Brutal.ImPlotApi.Internal.InlineArrays;
+global using Brutal.Numerics;
+global using Brutal.Pointers;
+global using Brutal.Pointers.Extensions;
+global using Brutal.Strings;
+global using PInvoke = Brutal.ImPlotApi.ImPlot.PInvoke;
