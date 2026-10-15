@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Questions and help
+    url: https://forums.ahwoo.dev/forums/brutal/guides-and-help/
+    about: "How do I…?" questions go here, not in issues.
+  - name: Discussion and ideas
+    url: https://forums.ahwoo.dev/forums/brutal/general/
+    about: General discussion about building on BRUTAL.
+  - name: Report a security vulnerability
+    url: https://github.com/ahwootech/BRUTAL/security/advisories/new
+    about: Please report security issues privately.

@@ -1,0 +1,36 @@
+name: Bug report
+description: Something in BRUTAL doesn't work as documented.
+labels: [bug, needs-triage]
+body:
+  - type: markdown
+    attributes:
+      value: "Questions belong on the [forums](https://forums.ahwoo.dev/forums/brutal/). Security issues: see SECURITY.md."
+  - type: input
+    id: packages
+    attributes:
+      label: Packages and versions
+      placeholder: Ahwoo.BRUTAL.Vulkan 2026.10.1, Ahwoo.BRUTAL.Memory 2026.10.1
+    validations:
+      required: true
+  - type: input
+    id: env
+    attributes:
+      label: Environment
+      placeholder: .NET 10.0.x, Windows 11, RTX 4070 / driver 581.x
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: Minimal repro
+      description: The smallest code that shows the problem.
+      render: csharp
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected vs actual
+      description: Include the full exception and stack trace if there is one.
+    validations:
+      required: true
