@@ -1,0 +1,175 @@
+THIRD-PARTY LICENSE NOTICES
+The Brutal.ImGui packages
+
+This file ships in all eight packages named below. They redistribute the third-party
+components listed here, each reproduced with the license that governs it.
+
+  One file serves all eight packages, so this table says which components apply to
+  the package you are holding:
+
+    RocketWerkz.Brutal.ImGui               Dear ImGui, and the three stb libraries
+                                           compiled into it
+    RocketWerkz.Brutal.ImGui.Backends      Dear ImGui's platform and renderer
+                                           backends, translated to C#
+    RocketWerkz.Brutal.ImGui.DemoWindow    Dear ImGui's demo sources, translated
+                                           to C#
+    RocketWerkz.Brutal.ImGui.FreeType      Dear ImGui's FreeType font adapter
+    RocketWerkz.Brutal.ImPlot              ImPlot
+    RocketWerkz.Brutal.ImPlot.DemoWindow   ImPlot's demo sources, translated to C#
+    RocketWerkz.Brutal.ImGui.Abstractions  no third-party code
+    RocketWerkz.Brutal.ImGui.Extensions    no third-party code
+
+  Where a package ships native libraries, it ships them for every runtime identifier
+  it supports (win-x64, linux-x64, osx-arm64):
+
+    Dear ImGui   1.92.2   imgui.dll / libimgui.so / libimgui.dylib
+                          imgui_freetype.dll / libimgui_freetype.so / libimgui_freetype.dylib
+    ImPlot       0.17     implot.dll / libimplot.so / libimplot.dylib
+
+  Dear ImGui vendors three of Sean Barrett's stb libraries, and all three are
+  compiled into the Dear ImGui binaries shipped here. They have their own section
+  below.
+
+  The managed assemblies are in scope as well as the native libraries. Type names,
+  enumerant values and entry-point signatures are generated from the corresponding
+  upstream headers, and the backend and demo assemblies are C# translations of
+  upstream sources.
+
+  RocketWerkz.Brutal.ImGui.FreeType binds Dear ImGui's FreeType font adapter, which
+  is Dear ImGui code and is covered by the Dear ImGui section below. FreeType itself
+  is in none of these eight packages; it is supplied by RocketWerkz.Brutal.FreeType,
+  whose own notices reproduce the FreeType License in full.
+
+
+==============================================================================
+Dear ImGui
+==============================================================================
+
+  Name        Dear ImGui
+  Version     1.92.2, docking branch
+  Upstream    https://github.com/ocornut/imgui
+  SPDX        MIT
+
+  Built from a RocketWerkz fork of the docking branch. The modifications are ours
+  and do not alter the terms below, which are reproduced from the copy these
+  packages were built from.
+
+  This component covers the imgui and imgui_freetype native libraries, the managed
+  bindings generated from Dear ImGui's headers, and the C# translations of Dear
+  ImGui's backend and demo sources.
+
+The MIT License (MIT)
+
+Copyright (c) 2014-2025 Omar Cornut
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+
+==============================================================================
+stb
+==============================================================================
+
+  Name        stb_rect_pack, stb_textedit, stb_truetype
+  Version     1.01, 1.14, 1.26 respectively
+  Upstream    https://github.com/nothings/stb
+  SPDX        MIT OR Unlicense
+
+  Vendored by Dear ImGui as imstb_rectpack.h, imstb_textedit.h and
+  imstb_truetype.h, and compiled into the Dear ImGui native libraries shipped
+  here. All three carry the same dual license, which offers a choice between
+  the MIT License and release into the public domain. It is reproduced once
+  below, from the copy these packages were built from.
+
+This software is available under 2 licenses -- choose whichever you prefer.
+------------------------------------------------------------------------------
+ALTERNATIVE A - MIT License
+Copyright (c) 2017 Sean Barrett
+Permission is hereby granted, free of charge, to any person obtaining a copy of
+this software and associated documentation files (the "Software"), to deal in
+the Software without restriction, including without limitation the rights to
+use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies
+of the Software, and to permit persons to whom the Software is furnished to do
+so, subject to the following conditions:
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+------------------------------------------------------------------------------
+ALTERNATIVE B - Public Domain (www.unlicense.org)
+This is free and unencumbered software released into the public domain.
+Anyone is free to copy, modify, publish, use, compile, sell, or distribute this
+software, either in source code form or as a compiled binary, for any purpose,
+commercial or non-commercial, and by any means.
+In jurisdictions that recognize copyright laws, the author or authors of this
+software dedicate any and all copyright interest in the software to the public
+domain. We make this dedication for the benefit of the public at large and to
+the detriment of our heirs and successors. We intend this dedication to be an
+overt act of relinquishment in perpetuity of all present and future rights to
+this software under copyright law.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN
+ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
+WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+------------------------------------------------------------------------------
+
+
+==============================================================================
+ImPlot
+==============================================================================
+
+  Name        ImPlot
+  Version     0.17, upstream commit 3da8bd3 (26 commits after tag v0.16)
+  Upstream    https://github.com/epezent/implot
+  SPDX        MIT
+
+  ImPlot is a plotting extension for Dear ImGui. Its version is the one ImPlot
+  reports for itself; the commit is given because upstream had not tagged 0.17 when
+  these packages were built.
+
+  This component covers the implot native library, the managed bindings generated
+  from ImPlot's headers, and the C# translation of ImPlot's demo sources.
+
+MIT License
+
+Copyright (c) 2020 Evan Pezent
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
