@@ -277,6 +277,9 @@ public partial class GlfwBackend : IPlatformBackend
     private unsafe byte* GetClipboardText(ImGuiContextPtr context)
     {
         var str = Glfw.Clipboard;
+        if (str is null)
+            return null;
+
         var byteCount = Utf8.GetByteCount(str);
         _cachedClipboardText.Count = byteCount + 1;
         Utf8.FromUtf16(str, _cachedClipboardText.AsSpan(), out _, out _);
