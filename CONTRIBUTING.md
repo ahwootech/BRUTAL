@@ -1,10 +1,10 @@
 # Contributing to BRUTAL
 
-Thanks for your interest in BRUTAL. You can submit issues and pull requests. We're a small team, and maintaining a public framework is a lot of work, so please be patient with us. We'll see how things go at first and adjust our process as we learn. Feedback on that process is welcome on the [forums](https://forums.ahwoo.dev/forums/brutal/general/).
+Thanks for your interest in BRUTAL. You can submit issues and pull requests. We're a small team, and maintaining a public framework is a lot of work, so please be patient with us. We'll see how things go at first and adjust our process as we learn. Feedback on that process is welcome on the [forums](https://forums.ahwoo.com/forums/brutal/general/).
 
 ## The short version
 
-- **Questions and "how do I…?"** go to the [BRUTAL forums](https://forums.ahwoo.dev/forums/brutal/guides-and-help/), not GitHub issues.
+- **Questions and "how do I…?"** go to the [BRUTAL forums](https://forums.ahwoo.com/forums/brutal/guides-and-help/), not GitHub issues.
 - **Bugs:** open an issue using the bug template, with a minimal repro.
 - **Anything bigger than a small fix:** open an issue first and wait for a maintainer to agree the approach before you write the code.
 - **Security problems:** report them privately. See [SECURITY.md](SECURITY.md).
@@ -20,7 +20,7 @@ Think of the relationship between the Linux kernel and a distribution like Ubunt
 - add dependencies without prior discussion
 - change public APIs without an agreed issue
 
-That isn't because we don't appreciate contributions. Adding everything is how the industry ended up with the kinds of engines BRUTAL exists to avoid. If you build something on top of BRUTAL, please share it in the [Tools and Libraries](https://forums.ahwoo.dev/forums/brutal/tools-and-libraries/) forum.
+That isn't because we don't appreciate contributions. Adding everything is how the industry ended up with the kinds of engines BRUTAL exists to avoid. If you build something on top of BRUTAL, please share it in the [Tools and Libraries](https://forums.ahwoo.com/forums/brutal/tools-and-libraries/) forum.
 
 ## Reporting bugs
 
