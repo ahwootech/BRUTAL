@@ -40,6 +40,7 @@ BRUTAL is not trying to be a general-purpose engine. There is no editor, no scen
 | [Kitten Space Agency](https://ahwoo.com/app/100000/kitten-space-agency/) | RocketWerkz | Direct on BRUTAL |
 | Torpedia | RocketWerkz | Direct on BRUTAL |
 | Art of the Rail | RocketWerkz | Direct on BRUTAL |
+| [Gruntz](https://www.youtube.com/watch?v=ROB5IilenZE) | RocketWerkz | Direct on BRUTAL |
 | Afterskies | Floating Origin Interactive | Direct on BRUTAL |
 
 Ludeon report 2 to 4 times the performance of the Unity build in their own tests, with the vast majority of existing mods still compatible. See their [Steam announcement](https://steamcommunity.com/games/294100/announcements/detail/672882362547178634).
