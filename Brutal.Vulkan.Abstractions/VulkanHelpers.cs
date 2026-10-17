@@ -11,6 +11,14 @@ namespace Brutal.VulkanApi.Abstractions;
 public static partial class VulkanHelpers
 {
     /// <summary>
+    /// Returns a packed version created from major, minor and patch components
+    /// </summary>
+    public static int MakeVersion(int major, int minor, int patch)
+    {
+        return (major << 22) | (minor << 12) | patch;
+    }
+
+    /// <summary>
     /// The number of mip levels in a full chain for the given 2D dimensions: floor(log2(max(width, height))) + 1.
     /// </summary>
     public static int MaxMipLevels(int width, int height)
