@@ -77,7 +77,7 @@ Each top-level folder in this repository is one library, published as a NuGet pa
 | `Brutal.Monitor.Common`, `Brutal.Monitor.Host`, `Brutal.RenderDoc`, `Brutal.RenderDoc.ImGui` | Runtime monitoring and RenderDoc capture integration |
 | `Brutal.NativeFileDialog`, `Brutal.NotCurses`, `Brutal.ZLib` | Native file dialogs, terminal UI, compression |
 
-Third-party notices for each library live in its `LICENSES` folder, `Brutal.ImGui/LICENSES` say.
+Third-party notices for each library live in its `LICENSES` folder (for example, `Brutal.ImGui/LICENSES`).
 
 ## Getting started
 
