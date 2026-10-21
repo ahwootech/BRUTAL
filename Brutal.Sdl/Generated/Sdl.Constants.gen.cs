@@ -11,6 +11,8 @@ namespace Brutal.SdlApi
             public const int AlphaOpaque = 255;
             public const int AlphaTransparent = 0;
             public const int AssertLevel = 2;
+            public const uint AudioDeviceDefaultPlayback = 4294967295u;
+            public const uint AudioDeviceDefaultRecording = 4294967294u;
             public const uint AudioMaskBigEndian = 4096u;
             public const uint AudioMaskBitsize = 255u;
             public const uint AudioMaskFloat = 256u;
