@@ -4,8 +4,8 @@
  * Allocates, uses and frees unmanaged memory with Mem, and owns a pointer with PtrOwner.
  */
 
-#:package Ahwoo.Brutal.Memory@2026.10.1
-#:package Ahwoo.Brutal.Core@2026.10.1
+#:package Ahwoo.Brutal.Memory@2026.10.2
+#:package Ahwoo.Brutal.Core@2026.10.4
 
 // RIAN: This package is due for a big update for custom allocators.
 

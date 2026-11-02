@@ -4,7 +4,7 @@
  * Opens the operating system's native file picker and prints the file you chose.
  */
 
-#:package Ahwoo.Brutal.NativeFileDialog@2026.10.2
+#:package Ahwoo.Brutal.NativeFileDialog@2026.10.3
 
 // RIAN: We only use this package for tooling, we prefer in-game file pickers for games.
 

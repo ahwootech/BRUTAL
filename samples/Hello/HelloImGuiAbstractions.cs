@@ -6,10 +6,10 @@
  * See Hello/HelloImGui.cs for Dear ImGui on screen.
  */
 
-#:package Ahwoo.Brutal.ImGui.Abstractions@2026.10.2
-#:package Ahwoo.Brutal.Core@2026.10.1
-#:package Ahwoo.Brutal.ImGui@2026.10.2
-#:package Ahwoo.Brutal.Numerics@2026.10.1
+#:package Ahwoo.Brutal.ImGui.Abstractions@2026.10.3
+#:package Ahwoo.Brutal.Core@2026.10.4
+#:package Ahwoo.Brutal.ImGui@2026.10.3
+#:package Ahwoo.Brutal.Numerics@2026.10.2
 
 // RIAN: This sample primarly showcases the console interface that all RW projects use.
 

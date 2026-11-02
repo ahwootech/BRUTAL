@@ -5,7 +5,7 @@
  */
 
 #:property AllowUnsafeBlocks=true
-#:package Ahwoo.Brutal.Core@2026.10.1
+#:package Ahwoo.Brutal.Core@2026.10.4
 
 // RIAN: This package mainly contains the absolute bare minimum types and methods we use often across our packages.
 

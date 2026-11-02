@@ -4,9 +4,9 @@
  * Compiles a small inline GLSL vertex shader to SPIR-V with shaderc and prints its size.
  */
 
-#:package Ahwoo.Brutal.ShaderC@2026.10.2
-#:package Ahwoo.Brutal.Core@2026.10.1
-#:package Ahwoo.Brutal.Strings@2026.10.1
+#:package Ahwoo.Brutal.ShaderC@2026.10.3
+#:package Ahwoo.Brutal.Core@2026.10.4
+#:package Ahwoo.Brutal.Strings@2026.10.2
 
 using Brutal.ShaderCApi;
 

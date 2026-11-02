@@ -4,8 +4,8 @@
  * Uses the Random extensions to generate numbers, points in shapes and random directions.
  */
 
-#:package Ahwoo.Brutal.Maths@2026.10.1
-#:package Ahwoo.Brutal.Numerics@2026.10.1
+#:package Ahwoo.Brutal.Maths@2026.10.3
+#:package Ahwoo.Brutal.Numerics@2026.10.2
 
 // RIAN: This library will be expanded in a future release, once the System.Numerics mirror is pulled out of Brutal.Numerics into its own flavor package
 //       We don't actually like the System.Numerics functions all that much, we only have them as compatibility at this stage.

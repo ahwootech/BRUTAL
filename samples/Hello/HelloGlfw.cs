@@ -4,8 +4,8 @@
  * Opens an empty GLFW window with no graphics API. Press Escape to close it.
  */
 
-#:package Ahwoo.Brutal.Glfw@2026.10.4
-#:package Ahwoo.Brutal.Numerics@2026.10.1
+#:package Ahwoo.Brutal.Glfw@2026.10.5
+#:package Ahwoo.Brutal.Numerics@2026.10.2
 
 using Brutal.GlfwApi;
 using Brutal.Numerics;

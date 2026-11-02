@@ -5,10 +5,10 @@
  * it produced. See Demo/DemoImGui.cs for an ImPlot plot on screen.
  */
 
-#:package Ahwoo.Brutal.ImGui@2026.10.2
-#:package Ahwoo.Brutal.ImPlot@2026.10.2
-#:package Ahwoo.Brutal.Core@2026.10.1
-#:package Ahwoo.Brutal.Numerics@2026.10.1
+#:package Ahwoo.Brutal.ImGui@2026.10.3
+#:package Ahwoo.Brutal.ImPlot@2026.10.3
+#:package Ahwoo.Brutal.Core@2026.10.4
+#:package Ahwoo.Brutal.Numerics@2026.10.2
 
 using Brutal.ImGuiApi;
 using Brutal.ImPlotApi;

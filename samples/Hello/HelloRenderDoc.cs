@@ -4,7 +4,7 @@
  * Checks whether RenderDoc's in-application API is available (not on macOS) and prints its state.
  */
 
-#:package Ahwoo.Brutal.RenderDoc@2026.10.2
+#:package Ahwoo.Brutal.RenderDoc@2026.10.3
 
 // RIAN: Use this package to debug your rendering more easily.
 

@@ -7,9 +7,9 @@
  */
 
 #:property AllowUnsafeBlocks=true
-#:package Ahwoo.Brutal.Vulkan@2026.10.2
-#:package Ahwoo.Brutal.Core@2026.10.1
-#:package Ahwoo.Brutal.Strings@2026.10.1
+#:package Ahwoo.Brutal.Vulkan@2026.10.3
+#:package Ahwoo.Brutal.Core@2026.10.4
+#:package Ahwoo.Brutal.Strings@2026.10.2
 
 // RIAN: This is NOT a best-practices Vulkan sample. There are many shortcuts taken that you should not take in production code.
 

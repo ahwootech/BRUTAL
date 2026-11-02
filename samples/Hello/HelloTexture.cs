@@ -5,10 +5,10 @@
  * and .ktx2, then loads both back with TextureLoader.
  */
 
-#:package Ahwoo.Brutal.Texture@2026.10.2
-#:package Ahwoo.Brutal.Texture.Abstractions@2026.10.2
-#:package Ahwoo.Brutal.Core@2026.10.1
-#:package Ahwoo.Brutal.Numerics@2026.10.1
+#:package Ahwoo.Brutal.Texture@2026.10.3
+#:package Ahwoo.Brutal.Texture.Abstractions@2026.10.3
+#:package Ahwoo.Brutal.Core@2026.10.4
+#:package Ahwoo.Brutal.Numerics@2026.10.2
 
 using System.Runtime.InteropServices;
 using Brutal.Numerics;

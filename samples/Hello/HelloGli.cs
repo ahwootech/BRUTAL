@@ -5,8 +5,8 @@
  */
 
 #:property AllowUnsafeBlocks=true
-#:package Ahwoo.Brutal.Gli@2026.10.1
-#:package Ahwoo.Brutal.Numerics@2026.10.1
+#:package Ahwoo.Brutal.Gli@2026.10.2
+#:package Ahwoo.Brutal.Numerics@2026.10.2
 
 // RIAN: This package may be deprecated in the future, as the extensions it supports may be covered by better packages.
 

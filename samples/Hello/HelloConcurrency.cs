@@ -4,7 +4,7 @@
  * Runs a few jobs across worker threads with the JobScheduler and waits for them to finish.
  */
 
-#:package Ahwoo.Brutal.Concurrency@2026.10.1
+#:package Ahwoo.Brutal.Concurrency@2026.10.2
 
 // RIAN: This job system is finely-tuned for the way RW projects like to implement concurrency, and has limitations we should document at some stage.
 

@@ -4,7 +4,7 @@
  * Vector and matrix basics: float3 arithmetic, dot/cross products and transforming by a float4x4.
  */
 
-#:package Ahwoo.Brutal.Numerics@2026.10.1
+#:package Ahwoo.Brutal.Numerics@2026.10.2
 
 // RIAN: This package current contains a mirror of the System.Numerics math library for compatibility in porting, but will be reduced
 //       to only the types in a future release. Math libraries are opinionated and should be picked by the developer, not the framework.

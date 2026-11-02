@@ -5,8 +5,8 @@
  * comes to rest. See Demo/DemoJolt.cs for a version that draws a pile of boxes in 3D with OpenGL.
  */
 
-#:package Ahwoo.Brutal.Jolt@2026.10.2
-#:package Ahwoo.Brutal.Numerics@2026.10.1
+#:package Ahwoo.Brutal.Jolt@2026.10.4
+#:package Ahwoo.Brutal.Numerics@2026.10.2
 
 using Brutal.JoltApi;
 using Brutal.Numerics;

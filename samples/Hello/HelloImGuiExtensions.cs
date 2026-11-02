@@ -5,10 +5,10 @@
  * See Hello/HelloImGui.cs for Dear ImGui on screen.
  */
 
-#:package Ahwoo.Brutal.ImGui.Extensions@2026.10.2
-#:package Ahwoo.Brutal.Core@2026.10.1
-#:package Ahwoo.Brutal.ImGui@2026.10.2
-#:package Ahwoo.Brutal.Numerics@2026.10.1
+#:package Ahwoo.Brutal.ImGui.Extensions@2026.10.3
+#:package Ahwoo.Brutal.Core@2026.10.4
+#:package Ahwoo.Brutal.ImGui@2026.10.3
+#:package Ahwoo.Brutal.Numerics@2026.10.2
 
 // RIAN: This package contains small extras for ImGui that we like, but possibly needs a better name as it's very opinionated.
 

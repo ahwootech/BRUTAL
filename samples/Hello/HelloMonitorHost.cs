@@ -4,8 +4,8 @@
  * Starts the Monitor (a crash/log watchdog subprocess), logs a few lines to a file and prints them.
  */
 
-#:package Ahwoo.Brutal.Monitor.Host@2026.10.2
-#:package Ahwoo.Brutal.Monitor.Common@2026.10.2
+#:package Ahwoo.Brutal.Monitor.Host@2026.10.3
+#:package Ahwoo.Brutal.Monitor.Common@2026.10.3
 
 // RIAN: We use this package for crash detection and dump collection at runtime.
 
