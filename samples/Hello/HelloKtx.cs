@@ -4,7 +4,7 @@
  * Creates a KTX2 texture, fills it with a checkerboard, writes it to disk and loads it back.
  */
 
-#:package Ahwoo.Brutal.Ktx@2026.10.1
+#:package Ahwoo.Brutal.Ktx@2026.10.2
 
 using Brutal.KtxApi;
 using Brutal.KtxApi.Abstractions;

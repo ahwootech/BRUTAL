@@ -5,8 +5,8 @@
  */
 
 #:property AllowUnsafeBlocks=true
-#:package Ahwoo.Brutal.MeshOptimizer@2026.10.1
-#:package Ahwoo.Brutal.Core@2026.10.1
+#:package Ahwoo.Brutal.MeshOptimizer@2026.10.2
+#:package Ahwoo.Brutal.Core@2026.10.4
 
 using Brutal.MeshOptimizer;
 

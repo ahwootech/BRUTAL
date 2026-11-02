@@ -10,8 +10,8 @@
  */
 
 #:property AllowUnsafeBlocks=true
-#:package Ahwoo.Brutal.Sdl@2026.10.2
-#:package Ahwoo.Brutal.Sdl.Ttf@2026.10.2
+#:package Ahwoo.Brutal.Sdl@2026.10.3
+#:package Ahwoo.Brutal.Sdl.Ttf@2026.10.3
 
 using Brutal.SdlApi;
 using Brutal.SdlApi.Ttf;

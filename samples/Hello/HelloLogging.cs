@@ -4,7 +4,7 @@
  * Sets up logging to the console and writes messages to the default and a named category.
  */
 
-#:package Ahwoo.Brutal.Logging@2026.10.2
+#:package Ahwoo.Brutal.Logging@2026.10.3
 
 // RIAN: This is a very-very thin wrapper around Microsoft.Extensions.Logging, but it provides a simpler API and a default category for quick logging.
 

@@ -8,8 +8,8 @@
  * DYLD_LIBRARY_PATH on macOS), or this throws DllNotFoundException.
  */
 
-#:package Ahwoo.Brutal.Fmod@2026.10.3
-#:package Ahwoo.Brutal.Core@2026.10.1
+#:package Ahwoo.Brutal.Fmod@2026.10.4
+#:package Ahwoo.Brutal.Core@2026.10.4
 
 // RIAN: It needs to be stressed that we do not provide FMOD binaries, and you must obtain them from the official FMOD website.
 

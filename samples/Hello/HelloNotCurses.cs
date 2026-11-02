@@ -4,8 +4,8 @@
  * Draws coloured text with notcurses and waits for a key. Run it in a real terminal.
  */
 
-#:package Ahwoo.Brutal.NotCurses@2026.10.0
-#:package Ahwoo.Brutal.Numerics@2026.10.1
+#:package Ahwoo.Brutal.NotCurses@2026.10.1
+#:package Ahwoo.Brutal.Numerics@2026.10.2
 
 // RIAN: I'm the only one who uses this for tooling, please don't use it in your server applications.
 

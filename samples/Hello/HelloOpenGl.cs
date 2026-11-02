@@ -5,10 +5,10 @@
  */
 
 #:property AllowUnsafeBlocks=true
-#:package Ahwoo.Brutal.Glfw@2026.10.4
-#:package Ahwoo.Brutal.OpenGl@2026.10.1
-#:package Ahwoo.Brutal.Core@2026.10.1
-#:package Ahwoo.Brutal.Numerics@2026.10.1
+#:package Ahwoo.Brutal.Glfw@2026.10.5
+#:package Ahwoo.Brutal.OpenGl@2026.10.2
+#:package Ahwoo.Brutal.Core@2026.10.4
+#:package Ahwoo.Brutal.Numerics@2026.10.2
 
 // RIAN: Our OpenGL samples run on 4.1 for compatibility with macOS, but we should support up to 4.6 no problem.
 

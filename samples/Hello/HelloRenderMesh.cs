@@ -4,10 +4,10 @@
  * Generates a procedural sphere mesh and prints its vertex and triangle counts.
  */
 
-#:package Ahwoo.Brutal.Render.Mesh@2026.10.1
-#:package Ahwoo.Brutal.Collections@2026.10.1
-#:package Ahwoo.Brutal.Core@2026.10.1
-#:package Ahwoo.Brutal.Numerics@2026.10.1
+#:package Ahwoo.Brutal.Render.Mesh@2026.10.2
+#:package Ahwoo.Brutal.Collections@2026.10.2
+#:package Ahwoo.Brutal.Core@2026.10.4
+#:package Ahwoo.Brutal.Numerics@2026.10.2
 
 using Brutal;
 using Brutal.Collections;

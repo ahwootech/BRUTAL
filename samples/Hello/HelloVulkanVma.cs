@@ -7,9 +7,9 @@
  */
 
 #:property AllowUnsafeBlocks=true
-#:package Ahwoo.Brutal.Vulkan@2026.10.2
-#:package Ahwoo.Brutal.Vulkan.Vma@2026.10.2
-#:package Ahwoo.Brutal.Core@2026.10.1
+#:package Ahwoo.Brutal.Vulkan@2026.10.3
+#:package Ahwoo.Brutal.Vulkan.Vma@2026.10.3
+#:package Ahwoo.Brutal.Core@2026.10.4
 
 using Brutal;
 using Brutal.VulkanApi;

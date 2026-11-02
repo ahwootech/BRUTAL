@@ -4,7 +4,7 @@
  * Formats localised strings with named variables, then swaps in a French translation.
  */
 
-#:package Ahwoo.Brutal.Localization@2026.10.2
+#:package Ahwoo.Brutal.Localization@2026.10.3
 
 using System.Diagnostics.CodeAnalysis;
 using Brutal.Localization;

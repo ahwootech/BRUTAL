@@ -5,7 +5,7 @@
  * allocations.
  */
 
-#:package Ahwoo.Brutal.Strings@2026.10.1
+#:package Ahwoo.Brutal.Strings@2026.10.2
 
 using Brutal.Strings;
 

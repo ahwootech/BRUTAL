@@ -9,11 +9,11 @@
  *     dotnet run Hello/HelloImGuiFreeType.cs -- path/to/font.ttf
  */
 
-#:package Ahwoo.Brutal.ImGui@2026.10.2
-#:package Ahwoo.Brutal.ImGui.FreeType@2026.10.2
-#:package Ahwoo.Brutal.Core@2026.10.1
-#:package Ahwoo.Brutal.Numerics@2026.10.1
-#:package Ahwoo.Brutal.Strings@2026.10.1
+#:package Ahwoo.Brutal.ImGui@2026.10.3
+#:package Ahwoo.Brutal.ImGui.FreeType@2026.10.3
+#:package Ahwoo.Brutal.Core@2026.10.4
+#:package Ahwoo.Brutal.Numerics@2026.10.2
+#:package Ahwoo.Brutal.Strings@2026.10.2
 
 using Brutal.ImGuiApi;
 using Brutal.ImGuiApi.FreeType;

@@ -5,9 +5,9 @@
  * See Demo/DemoBox2D.cs for a version that draws a stack of boxes with OpenGL.
  */
 
-#:package Ahwoo.Brutal.Box2D@2026.10.1
-#:package Ahwoo.Brutal.Core@2026.10.1
-#:package Ahwoo.Brutal.Numerics@2026.10.1
+#:package Ahwoo.Brutal.Box2D@2026.10.2
+#:package Ahwoo.Brutal.Core@2026.10.4
+#:package Ahwoo.Brutal.Numerics@2026.10.2
 
 using Brutal.Box2DApi;
 using Brutal.Numerics;
