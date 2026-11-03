@@ -49,7 +49,7 @@ static void Run()
     // Texture: a KTX2 texture with room for every mip level, as in Hello/HelloKtx.cs.
     var createInfo = new KtxTextureCreateInfo
     {
-        VkFormat = (uint)VkFormat.R8G8B8A8Unorm,
+        VkFormat = (uint)VkFormat.R8G8B8A8UNorm,
         BaseWidth = SIZE,
         BaseHeight = SIZE,
         BaseDepth = 1,
