@@ -4,7 +4,7 @@
  * Opens the default audio device with OpenAL and plays a generated one-second 440 Hz tone.
  */
 
-#:package Ahwoo.Brutal.OpenAl@2026.10.2
+#:package Ahwoo.Brutal.OpenAl@2026.10.3
 
 using System.Runtime.InteropServices;
 using Brutal.OpenAlApi;

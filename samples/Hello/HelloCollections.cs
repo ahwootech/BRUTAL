@@ -5,8 +5,8 @@
  * remove, iterate and edit it as a span.
  */
 
-#:package Ahwoo.Brutal.Collections@2026.10.1
-#:package Ahwoo.Brutal.Core@2026.10.1
+#:package Ahwoo.Brutal.Collections@2026.10.2
+#:package Ahwoo.Brutal.Core@2026.10.4
 
 // RIAN: This package will be greatly improved in an upcoming release of custom allocators, and collections that use them.
 

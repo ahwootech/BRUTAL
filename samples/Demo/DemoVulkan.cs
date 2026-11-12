@@ -8,15 +8,15 @@
  */
 
 #:property AllowUnsafeBlocks=true
-#:package Ahwoo.Brutal.Vulkan@2026.10.2
-#:package Ahwoo.Brutal.Vulkan.Abstractions@2026.10.2
-#:package Ahwoo.Brutal.Vulkan.Vma@2026.10.2
-#:package Ahwoo.Brutal.Glfw@2026.10.4
-#:package Ahwoo.Brutal.ShaderC@2026.10.2
-#:package Ahwoo.Brutal.Core@2026.10.1
-#:package Ahwoo.Brutal.Memory@2026.10.1
-#:package Ahwoo.Brutal.Numerics@2026.10.1
-#:package Ahwoo.Brutal.Strings@2026.10.1
+#:package Ahwoo.Brutal.Vulkan@2026.10.3
+#:package Ahwoo.Brutal.Vulkan.Abstractions@2026.10.3
+#:package Ahwoo.Brutal.Vulkan.Vma@2026.10.3
+#:package Ahwoo.Brutal.Glfw@2026.10.5
+#:package Ahwoo.Brutal.ShaderC@2026.10.3
+#:package Ahwoo.Brutal.Core@2026.10.4
+#:package Ahwoo.Brutal.Memory@2026.10.2
+#:package Ahwoo.Brutal.Numerics@2026.10.2
+#:package Ahwoo.Brutal.Strings@2026.10.2
 
 using Brutal;
 using Brutal.GlfwApi;

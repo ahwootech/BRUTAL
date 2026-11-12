@@ -5,9 +5,9 @@
  */
 
 #:property AllowUnsafeBlocks=true
-#:package Ahwoo.Brutal.Slang@2026.10.1
-#:package Ahwoo.Brutal.Core@2026.10.1
-#:package Ahwoo.Brutal.Strings@2026.10.1
+#:package Ahwoo.Brutal.Slang@2026.10.3
+#:package Ahwoo.Brutal.Core@2026.10.4
+#:package Ahwoo.Brutal.Strings@2026.10.2
 
 using Brutal.SlangApi;
 

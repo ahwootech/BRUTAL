@@ -5,8 +5,8 @@
  * prints a pixel.
  */
 
-#:package Ahwoo.Brutal.Stb@2026.10.2
-#:package Ahwoo.Brutal.Numerics@2026.10.1
+#:package Ahwoo.Brutal.Stb@2026.10.3
+#:package Ahwoo.Brutal.Numerics@2026.10.2
 
 // RIAN: Warning this library is handy for PNG, but it's pretty slow at runtime.
 

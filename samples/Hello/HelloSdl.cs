@@ -7,7 +7,7 @@
  */
 
 #:property AllowUnsafeBlocks=true
-#:package Ahwoo.Brutal.Sdl@2026.10.2
+#:package Ahwoo.Brutal.Sdl@2026.10.3
 
 // RIAN: We don't use SDL in any of our projects today, but feedback is appreciated.
 

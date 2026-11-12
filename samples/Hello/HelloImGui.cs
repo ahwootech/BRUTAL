@@ -6,12 +6,12 @@
  */
 
 #:property AllowUnsafeBlocks=true
-#:package Ahwoo.Brutal.ImGui@2026.10.2
-#:package Ahwoo.Brutal.ImGui.Backends@2026.10.2
-#:package Ahwoo.Brutal.Core@2026.10.1
-#:package Ahwoo.Brutal.Glfw@2026.10.4
-#:package Ahwoo.Brutal.Numerics@2026.10.1
-#:package Ahwoo.Brutal.OpenGl@2026.10.1
+#:package Ahwoo.Brutal.ImGui@2026.10.3
+#:package Ahwoo.Brutal.ImGui.Backends@2026.10.3
+#:package Ahwoo.Brutal.Core@2026.10.4
+#:package Ahwoo.Brutal.Glfw@2026.10.5
+#:package Ahwoo.Brutal.Numerics@2026.10.2
+#:package Ahwoo.Brutal.OpenGl@2026.10.2
 
 // RIAN: Please look at this example carefully, especially how the SharedStorage is reset once per frame.
 //       The shared storage (leveraged for allocation-free string interpolation) will OoM eventually if you don't.

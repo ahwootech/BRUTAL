@@ -16,12 +16,12 @@
 // file-based apps) disables.
 #:property PublishAot=false
 #:property AllowUnsafeBlocks=true
-#:package Ahwoo.Brutal.Gltf@2026.10.2
-#:package Ahwoo.Brutal.MeshOptimizer@2026.10.1
-#:package Ahwoo.Brutal.Glfw@2026.10.4
-#:package Ahwoo.Brutal.OpenGl@2026.10.1
-#:package Ahwoo.Brutal.Core@2026.10.1
-#:package Ahwoo.Brutal.Numerics@2026.10.1
+#:package Ahwoo.Brutal.Gltf@2026.10.3
+#:package Ahwoo.Brutal.MeshOptimizer@2026.10.2
+#:package Ahwoo.Brutal.Glfw@2026.10.5
+#:package Ahwoo.Brutal.OpenGl@2026.10.2
+#:package Ahwoo.Brutal.Core@2026.10.4
+#:package Ahwoo.Brutal.Numerics@2026.10.2
 
 using System.Runtime.InteropServices;
 using Brutal;

@@ -8,12 +8,12 @@
  */
 
 #:property AllowUnsafeBlocks=true
-#:package Ahwoo.Brutal.Glfw@2026.10.4
-#:package Ahwoo.Brutal.OpenGl@2026.10.1
-#:package Ahwoo.Brutal.RenderDoc@2026.10.2
-#:package Ahwoo.Brutal.Core@2026.10.1
-#:package Ahwoo.Brutal.Numerics@2026.10.1
-#:package Ahwoo.Brutal.Strings@2026.10.1
+#:package Ahwoo.Brutal.Glfw@2026.10.5
+#:package Ahwoo.Brutal.OpenGl@2026.10.2
+#:package Ahwoo.Brutal.RenderDoc@2026.10.3
+#:package Ahwoo.Brutal.Core@2026.10.4
+#:package Ahwoo.Brutal.Numerics@2026.10.2
+#:package Ahwoo.Brutal.Strings@2026.10.2
 
 using Brutal;
 using Brutal.GlfwApi;

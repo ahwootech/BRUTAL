@@ -8,11 +8,11 @@
  * has a Help link and a load/unload button. See Demo/DemoRenderDoc.cs for capturing frames.
  */
 
-#:package Ahwoo.Brutal.ImGui@2026.10.2
-#:package Ahwoo.Brutal.RenderDoc@2026.10.2
-#:package Ahwoo.Brutal.RenderDoc.ImGui@2026.10.2
-#:package Ahwoo.Brutal.Core@2026.10.1
-#:package Ahwoo.Brutal.Numerics@2026.10.1
+#:package Ahwoo.Brutal.ImGui@2026.10.3
+#:package Ahwoo.Brutal.RenderDoc@2026.10.3
+#:package Ahwoo.Brutal.RenderDoc.ImGui@2026.10.3
+#:package Ahwoo.Brutal.Core@2026.10.4
+#:package Ahwoo.Brutal.Numerics@2026.10.2
 
 using Brutal.ImGuiApi;
 using Brutal.Numerics;

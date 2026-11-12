@@ -7,7 +7,7 @@
 // Brutal.Gltf uses reflection-based System.Text.Json, which Native AOT (the default for
 // file-based apps) disables.
 #:property PublishAot=false
-#:package Ahwoo.Brutal.Gltf@2026.10.2
+#:package Ahwoo.Brutal.Gltf@2026.10.3
 
 using System.Runtime.InteropServices;
 using Brutal.GltfApi;
