@@ -84,9 +84,11 @@ Third-party notices for each library live in its `LICENSES` folder, `Brutal.ImGu
 ### Prerequisites
 
 - [.NET 10 SDK](https://dotnet.microsoft.com/download)
-- A Vulkan 1.3 capable GPU with current drivers (if you render)
-- The [Vulkan SDK](https://vulkan.lunarg.com/) if you want validation layers while developing
-- Windows or Linux
+- Windows x64, Linux x64, or macOS on Apple silicon. Native-library availability depends on the packages you use.
+- A Vulkan 1.3 capable GPU with current drivers (if you use Vulkan)
+- The [Vulkan SDK](https://vulkan.lunarg.com/) if you want Vulkan validation layers while developing; on macOS it also provides the Vulkan loader and MoltenVK
+
+Vulkan is not required for SDL rendering. `Ahwoo.Brutal.Sdl` bundles native SDL libraries for `win-x64`, `linux-x64`, and `osx-arm64`, so it does not require a separate SDL installation.
 
 ### Your first window
 
