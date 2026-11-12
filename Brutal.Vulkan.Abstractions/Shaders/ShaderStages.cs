@@ -28,7 +28,7 @@ public class ShaderStages(Device inDevice, Span<VkPipelineShaderStageCreateInfo>
     }
 
     /// <summary>
-    /// Implicit cast to the <see cref="VkPipelineVertexInputStateCreateInfo">PipelineVertexInputStateCreateInfo</see> structure
+    /// Implicit cast to the <see cref="VkPipelineShaderStageCreateInfo">PipelineShaderStageCreateInfo</see> structure
     /// </summary>
     public static unsafe implicit operator VkPipelineShaderStageCreateInfo*(ShaderStages inValue) =>
         inValue._stages.Ptr;
